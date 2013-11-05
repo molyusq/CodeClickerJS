@@ -1,4 +1,4 @@
 CodeClickerJS
 =============
 
-javascript part of code clicker.
+Web-oriented version of codeclicker.

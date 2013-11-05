@@ -10,6 +10,8 @@ var programmersMultiplier = 0.1;
 
 function init() {
 	updateStats();
+	Cookies.setCookie("name", "vasyok", 365);
+	//Cookies.checkCookie(name);
 	//bugPercentage = $("#bugs").text();
 }
 
@@ -26,7 +28,8 @@ window.onload = function() {
 	init();
 	setInterval(function() {
 		stats.loc+=stats.locPerSecond;
-		bugAdd(bugPercentage - 30);		
+		if (programmersCount > 0)
+			bugAdd(bugPercentage - 30);		
 		updateStats();		
 	}, 1000);	
 	setInterval(function() {
