@@ -8,7 +8,7 @@ var programmersCount = 0;
 var bugPercentage = 37;
 var programmersMultiplier = 0.1;
 
-function start() {
+function init() {
 	updateStats();
 	//bugPercentage = $("#bugs").text();
 }
@@ -23,7 +23,7 @@ function hireProgrammer() {
 }
 
 window.onload = function() {
-	start();
+	init();
 	setInterval(function() {
 		stats.loc+=stats.locPerSecond;
 		bugAdd(bugPercentage - 30);		
@@ -45,7 +45,9 @@ function makeRound(number, decimals) {
 function updateStats() {
 	$("#prog").html(programmersCount);
 	$("#lps").html(makeRound(stats.locPerSecond, 1));
-	$("#div").html(makeRound(stats.loc, 1) + " " + stats.bug + " " + makeRound(stats.money, 1));	
+	$("body>#div").html(makeRound(stats.loc, 1) + " " + stats.bug + " " + makeRound(stats.money, 1));
+	//$("#locArea>div>h1").html(makeRound(stats.loc, 1));
+	//$("#locArea>div>h2").html(makeRound(stats.locPerSecond, 1))
 }
 
 function clickFunction() {
@@ -57,7 +59,7 @@ function bugChange(bugPercentage) {
 	return Math.floor(Math.random()*(45 - bugPercentage) + 1) == 1;
 }
 function bugAdd(bugPercentage) {
-	if(bugChange(bugPercentage) && stats.loc >= stats.bug) {		
+	if(bugChange(bugPercentage) && Math.floor(stats.loc) > stats.bug) {		
 		stats.bug++;	
 	}	
 }
