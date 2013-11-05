@@ -11,7 +11,7 @@ var programmersMultiplier = 0.1;
 function init() {
 	updateStats();
 	Cookies.setCookie("name", "vasyok", 365);
-	//Cookies.checkCookie(name);
+	
 	//bugPercentage = $("#bugs").text();
 }
 
@@ -21,6 +21,7 @@ function hireProgrammer() {
 		programmersCount++;
 		stats.money -= 10*makeRound(Math.pow(1.15,programmersCount - 1),1);
 	}
+	alert(Cookies.getCookie("name"));
 	updateStats();
 }
 
