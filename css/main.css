@@ -1,0 +1,424 @@
+
+@font-face
+{
+	font-family: vertigo;
+	src: url("../fonts/vertigo.ttf");	
+}
+
+@font-face
+{
+	font-family: rocko;
+	src: url("../fonts/rocko.ttf");	
+}
+
+body,html{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;	
+	overflow: hidden;	
+	min-width: 750px;
+	min-height:480px;
+}
+
+
+#leftCol{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0%;
+	width: 30%;
+	height: 100%;	
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: #ccc;
+}
+
+#centerCol{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 30%;
+	width: 40%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: lightgray;
+}
+
+#rightCol{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 70%;
+	width: 30%;
+	height: 100%;	
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: #ccc;
+}
+
+.col{
+	
+}
+
+#clickAreaContainer{
+	position:absolute;
+	width: 100%;
+	bottom: 0px;
+}
+#clickArea{
+	margin-left: auto;
+	margin-right: auto;	
+	width: 720px;
+	height: 70px;
+	background-color: white;	
+	
+	text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	overflow: hidden;
+	font-family: vertigo;
+	font-weight: bold;	
+	
+	padding: 15px;
+	box-shadow: 0px 0px 20px black;
+	border-top: 8px solid blue;	
+	position: relative;
+	z-index: 5;
+}
+ 
+.clickArea {
+    width: 31%;
+    height: 100%;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;	
+	text-align: center;
+	cursor: pointer;	
+	display:inline-block;
+}
+
+.clickArea img{
+	width: 64px;
+	height: 64px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.clickArea div{
+	float:right;
+}
+
+.clickArea:hover img{
+	width: 74px;
+	height: 74px;
+	margin-top: 0px;
+}
+
+.clickArea:hover{
+	padding-bottom: 10px;
+	border-bottom: 6px solid blue;
+}
+
+.clickArea h1{
+	font-size: 28px;
+	margin: 0;
+	padding: 0;	
+}
+
+.clickArea h2{
+	font-size: 22px;
+	margin: 0;
+	padding: 0;	
+}
+
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+
+#projects{	
+}
+
+#freelance{
+	background-color: green;
+	overflow: hidden;	
+	position: relative;
+	z-index: 1;
+	height:80px;
+	margin-bottom: -90px;	
+}
+
+div#newproject{
+	margin-left: auto;
+	margin-right: auto;
+	width: 360px;
+	text-align: center;
+}
+
+div#newproject div.message{
+	background-color: green;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	height: 40px;
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	color: yellow;
+	font-size: 26px;
+	font-family: vertigo;
+}
+
+.projects{
+	list-style: none;
+	font-weight: normal;
+	margin: 0px;
+	padding: 5px;
+	overflow-y: scroll;	
+}
+
+.projects li{
+	margin: 5px;
+	padding: 0px;
+	box-shadow: 2px 2px 5px black;
+	background-color: white;
+	height: 64px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+}
+
+.projects li div.top, #projects li div.requirements{
+	width: 100%;
+	height: 32px;
+}
+.projects li div.top{
+	font-weight: bold;
+	background-color: #eee;
+	margin: 0px;
+}
+
+
+.projects li div.top div.name{
+	font-size: 18px;	
+	float: left;
+	margin: 5px;
+}
+
+.projects li div.top div.money{
+	float: right;
+	color: rgb(0,200,50);
+	margin: 5px;
+}
+
+.projects li div.loc{
+	padding: 5px;
+	float: left;
+}
+.projects li div.maxbugs{
+	padding: 5px;
+	float: left;
+}
+
+#programmers{
+	overflow-y: scroll;
+	overflow-x: hidden;	
+}
+
+ul.units{
+	margin: 0px;
+	padding: 0px;
+}
+ul.units li{
+	width: 100%;
+	height: 64px;
+	border-bottom: 4px solid #eee;
+	list-style: none;
+	margin: 0px;	
+	padding-left: 10px;
+	padding-top: 6px;
+	background-color: white;
+	cursor: pointer;
+}
+
+ul.units li:hover{
+	border-bottom: 4px solid blue;
+	background-color: #eee;
+}
+
+ul.units li img{
+	width: 50px;
+	height: 50px;
+}
+
+.header{
+	font-family: vertigo;
+	font-size: 24px;
+	background-color: green;
+	color: yellow;
+	padding-left: 15px;
+}
+
+.tab-content{
+height: 100%;
+}
+.tab-pane{
+display: none;
+width:100%;
+height: 100%;
+}
+.tab-content .active{
+display:block;
+}
+
+ul.nav-tabs{
+	display: inline-block;
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+ul.nav-tabs li{
+	width: 33%;
+	text-align: center;	
+	padding:0px;
+	list-style:none;
+	float: left;	
+	background-color: #ccc;
+	border-bottom: 4px solid transparent;
+}
+ul.nav-tabs li a{
+	font-family: vertigo;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: inherit;	
+	padding:0;
+	border-radius: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-decoration:none;
+	width:100%;
+	color: black;
+}
+ul.nav-tabs li:hover{
+	border-bottom: 4px solid blue;
+}
+
+ul.nav-tabs li.active, 
+ul.nav-tabs li.active:hover{
+	border-bottom: 4px solid blue;	
+	background-color: green;
+}
+
+ul.nav-tabs li.active a, 
+ul.nav-tabs li.active:hover a{
+	color: white;
+}
+
+.grid{
+	height: 75%;
+	overflow-y: scroll;
+}
+.grid ul{
+	margin-left: auto;
+	margin-right: auto;	
+	padding: 0px;
+	margin: 0px;
+	list-style:none;
+	height: 100%;	 
+	 word-wrap: break-all;		
+	margin-left:10px;
+}
+.grid ul li{
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin: 3px;	
+	border: 4px solid gray;
+}
+
+.grid ul li:hover{
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.grid ul li img{
+width: 64px;
+height: 64px;
+margin: 5px;
+}
+
+#tooltipInfo{
+display:none;
+	position: absolute;	
+	background-color: white;
+	padding: 10px;
+	box-shadow: 0px 0px 5px black;
+	z-index: 10;
+	min-width: 256px;
+	min-height: 64px;
+	border-top: 4px solid blue;
+}
+
+#programmers{
+	height: 200px;
+}
+#addProgrammer{
+	padding: 5px;
+	padding-left: 15px;	
+	background-color: #ccc;	
+	height: 38px;	
+}
+#addProgrammer img{
+	width: 38px;
+	height: 38px;
+}
+
+#newProgrammers{
+	height:200px;
+}
+
+.mantest{
+	float: left;
+	width: 50%;
+}
+
+li .hrImage{
+	float:right;
+	opacity: 0;
+	margin-right: 15px;
+}
+li.hr .hrImage{
+	opacity: 1;
+}
+
+.units li .image{
+	float: left;
+	margin-right: 5px;
+}
+
+.units li .info{
+	float: left;
+	overflow: hidden;	
+}
+
+.units li .info .name{
+	font-size: 26px;
+	font-family: vertigo;
+	font-weight: bold;
+}
+
+.units li .info .price{
+	font-size: 18px;
+	font-family: vertigo;
+	color: green;
+}
